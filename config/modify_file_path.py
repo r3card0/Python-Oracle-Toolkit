@@ -17,10 +17,3 @@ class ModifyFilePath:
         except SyntaxError:
             print("Syntax Error, windows file path format, adding 'r'")
 
-    
-# Example of how to instantiate the class
-# # instantiate the class ModifyFilePath
-# test_mod = ModifyFilePath(r"C:\Users\rodrigue2\Code\development\base\modify_file_path.py")
-
-# # add operation fix_path
-# print("El filepath corregido es:" + str(test_mod.fix_filepath()))

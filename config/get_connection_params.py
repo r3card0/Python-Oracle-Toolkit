@@ -11,6 +11,7 @@ class Params:
         try:
             with open(self.connection_file,'r') as config_file:
                 config = json.load(config_file)
+                # return params as diccionary
                 return config.get('oracle',{})
         except FileNotFoundError as e:
             print(f"Error: File not found")
@@ -23,5 +24,6 @@ class Params:
         user = config.get("user")
         passw = config.get("password")
         connection_chain = config.get("connection")
-        params = (user,passw,connection_chain)
+        # Arrange parameters on a tuple
+        params = [user,passw,connection_chain]
         return params
