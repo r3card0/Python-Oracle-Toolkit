@@ -2,4 +2,5 @@
 /test
 /utils/__pycache__
 /venv_test
-/utils/.ipynb_checkpoints/__init__-checkpoint.py
+/utils/.ipynb_checkpoints
+/notebooks/.ipynb_checkpoints
