@@ -19,14 +19,27 @@ The connector is designed for data professionals who need reliable Oracle databa
   
 
 ## Installation
-Prerequisites
+
+### Prerequisites
 
 * Python 3.10
 * Oracle Client Libraries
 * Access to Oracle Database 12g or higher
 
+### Requirements
+
+This project requires an additional dependency that must be installed directly from GitHub repository.
+
+Make sure to install it before running the project
+
+```bash
+pip install git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0
+```
+
+> ⚠️ Note: This dependency is not available on PyPI. It must be installed directly from the GitHub source
+
 ## Use cases
-**📊 Busines Analytics**
+**📊 Busines Intelligence**
 * Calculate KPIs ad metrics from operational data
 * Generate reports for stakeholders meetings
 * Perform trend analysis on historical data
@@ -38,7 +51,7 @@ Prerequisites
 
 **🔍 Dashboard Integration**
 * Validate data integrity
-* Identofy missing or insconsistencies records
+* Identify missing or insconsistencies records
 * Generate data quality reports
 
 **🔁 ETL Processes**
@@ -46,4 +59,28 @@ Prerequisites
 * Create KPI dashboards
 * Monitor operational metrics
 
-⭐ Star this repository if it helped you
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+* Inspired by the need for seamless file path conversion when working with WSL
+* Built for developers who frequently switch between Windows and Linux environments.
+
+## Author
+@[r3card0](https://github.com/r3card0)
+
+Project Links: https://github.com/r3card0/WSL-path-converter
+
+

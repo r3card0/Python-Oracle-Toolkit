@@ -2,7 +2,8 @@
 # Este puede ser un archivo o estar definido en una variable
 # Dependiendo del origen, es el proceso que entra en accion para que lo retorne de forma que pueda ser usado por la funcion 
 
-from modify_file_path import ModifyFilePath
+# from modify_file_path import ModifyFilePath
+from path_converter import PathConverter
 import os
 
 class SqlQuery:
@@ -17,7 +18,7 @@ class SqlQuery:
             return False
         
     def reads_sql_file(self):
-        convert_sql_filepath = ModifyFilePath(self.query).convert_filepath()
+        convert_sql_filepath = PathConverter(self.query).to_wsl()
 
         # open the file and append the sql statements as a list
         with open(convert_sql_filepath,"r",encoding="utf-8") as file:

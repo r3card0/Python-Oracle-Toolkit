@@ -1,0 +1,3 @@
+pandas
+cx_Oracle
+git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0

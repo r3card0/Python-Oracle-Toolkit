@@ -1,10 +1,13 @@
-from modify_file_path import ModifyFilePath
+#from modify_file_path import ModifyFilePath
+
+from path_converter import PathConverter
+
 import json
 
 class Params:
     def __init__(self,json_file:str):
         self.filepath = json_file
-        self.connection_file = ModifyFilePath(self.filepath).convert_filepath()
+        self.connection_file = PathConverter(self.filepath).to_wsl()
 
     # Class Method: Reads json file and returns a dictionary with connection parameters
     def read_connection_params(self):
