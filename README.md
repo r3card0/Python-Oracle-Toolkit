@@ -20,6 +20,12 @@ The connector is designed for data professionals who need reliable Oracle databa
 
 ## Installation
 
+Clone repository
+
+```bash
+git clone https://github.com/r3card0/Python-Oracle-Toolkit.git
+```
+
 ### Prerequisites
 
 * Python 3.10
@@ -28,15 +34,91 @@ The connector is designed for data professionals who need reliable Oracle databa
 
 ### Requirements
 
+The file [requierements.txt](/requirements.txt) contains the libraries and dependencies.
+
+```
+pandas
+cx_Oracle
+jupyter
+git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0
+```
+
+Create  a virtual environment
+
+```python
+python3 -m venv venv_name
+```
+
+Activate the virtual environment
+
+```python
+source venv_name/bin/activate
+```
+
+
+You can use the requirements.txt file to perform the installation of libraries and dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
 This project requires an additional dependency that must be installed directly from GitHub repository.
 
-Make sure to install it before running the project
+Make sure to install it before running the project. It can be installed manually
 
 ```bash
 pip install git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0
 ```
 
 > ⚠️ Note: This dependency is not available on PyPI. It must be installed directly from the GitHub source
+
+## Implementation
+
+1. Open a new python file or notebook
+2. Set parent folder and SqlQuery class
+   ```python
+   # Import 
+    import sys
+    from pathlib import Path
+
+    # Add the parent folder of Python to the path
+    parent_folder = Path.cwd().parent  # Move up one directory from notebooks/
+    sys.path.insert(0, str(parent_folder))
+
+    from utils.process_sql_query import SqlQuery
+   ```
+
+3. Set Parameters
+    ```python
+    ## Parameters
+
+    json_file = r"C:\Users\user\file.json" # or "/mnt/c/Users/user/file.json"
+
+    sql_query = r"C:\Users\user\file.sql"  # or "/mnt/c/Users/user/file.sql"
+
+    # or 
+
+    sql_query2 = """
+    SELECT employee_id
+    FROM employees
+    """
+
+    # schema/puggable database
+    schema = "production_B"
+    ```
+
+4. Run process
+    ```python
+    connection = SqlQuery(json_file,sql_query,schema)
+    ```
+
+    ```python
+    # get dataframe
+    df = connection.create_dataframe
+    ```
+
+Or go to [notebook1](/notebooks/notebook1.ipynb) file and follow the instructions to start.
+
 
 ## Use cases
 **📊 Busines Intelligence**
@@ -81,6 +163,8 @@ This project is licensed under the MIT License
 ## Author
 @[r3card0](https://github.com/r3card0)
 
-Project Links: https://github.com/r3card0/WSL-path-converter
+Project Links: https://github.com/r3card0/Python-Oracle-Toolkit.git
+
+Dependencies : https://github.com/r3card0/WSL-path-converter
 
 
