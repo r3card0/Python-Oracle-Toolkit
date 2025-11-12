@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-oracle-toolkit"
+version = "0.1.0"
+description = "Toolkit that provides a robust solution for connecting to Oracle databases and managing Pluggable Databases (PDB) through Python"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "r3card0", email = "ricardo.rdz@protonmail.com"}
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

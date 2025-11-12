@@ -1,6 +1,5 @@
 /Docs
 /test
-/utils/__pycache__
+/utils
 /venv_test
-/utils/.ipynb_checkpoints
 /notebooks/.ipynb_checkpoints
