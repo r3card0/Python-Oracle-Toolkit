@@ -1,4 +1,5 @@
 pandas
 cx_Oracle
 jupyter
+git+https://github.com/r3card0/Python-Oracle-Toolkit.git@0.1.0
 git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0
