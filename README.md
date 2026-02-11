@@ -1,17 +1,18 @@
 # Oracle - Python Database Connector
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 
 Toolkit to connect and manage Oracle databases with Python.
 
-## Description
+## 🧭 Overview
 This toolkit provides a robust solution for connecting to Oracle databases and managing Pluggable Databases (PDB) through Python.
 
 It streamlines database operations by offering a unified interface for executing SQL scripts, performing data extractions and integrating with various analytical and ETL workflows.
 
 The connector is designed for data professionals who need reliable Oracle database connectivity for business analytics, data quality assesments, geospatial data processing, dashboard creation and ETL pipeline development.
 
-## Key Features
+## 🛠️ Key Features
 * 🔌**Smart Oracle Connection Management** - Seamless connection to Oracle databases with PDB selection.
 * 📜 **SQL Script Execution** - Run complex SQL scripts with error handling and logging.
 * 🗺️ **Shapefile Export** - Convert spatial data directly to ESRI Shapefile format.
@@ -21,7 +22,7 @@ The connector is designed for data professionals who need reliable Oracle databa
 * ⚡ **Performance Optimized** - Efficient connection pooling and query execution
   
 
-## Installation
+## ⚙️ Installation
 
 ### Prerequisites
 
@@ -63,18 +64,13 @@ Alternatively, you can install this repository as a dependency within your own p
     pip install -r requirements.txt
     ```
 
-or install manually
 
-```bash
-pip install git+https://github.com/r3card0/Python-Oracle-Toolkit.git@v0.1.0
-```
-
-### Usage
+## 🚗 Usage
 
 Basic Example
 
 ```python
-from python_oracle_toolkit.process_sql_query import SqlQuery
+from python_oracle_toolkit import SqlQuery
 
 ## Parameters
 
@@ -89,28 +85,15 @@ sql_query2 = """
     FROM employees
     """
 
-# schema/puggable database
+# schema/puggable database 
+# if there're not a schema, then use None
 schema = "production_B"
 
-# Run proces
+# Instantiate the SqlQuery class
 connection = SqlQuery(json_file,sql_query,schema)
 
 # get dataframe
 df = connection.create_dataframe()
-```
-
-Or go to [notebook1](/notebooks/notebook1.ipynb) file and follow the instructions to start.
-
-### Requirements
-
-The file [requirements.txt](/requirements.txt) contains the libraries and dependencies.
-
-```
-pandas
-cx_Oracle
-jupyter
-git+https://github.com/r3card0/Python-Oracle-Toolkit.git@v0.1.0
-git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0
 ```
 
 
@@ -146,30 +129,31 @@ pip install git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0
 * Create KPI dashboards
 * Monitor operational metrics
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
 
 ## License
 
 This project is licensed under the MIT License
 
-## Acknowledgments
-
-* Inspired by the need for seamless file path conversion when working with WSL
-* Built for developers who frequently switch between Windows and Linux environments.
-
-## Author
-@[r3card0](https://github.com/r3card0)
-
-Project Links: https://github.com/r3card0/Python-Oracle-Toolkit.git
-
-Dependencies : https://github.com/r3card0/WSL-path-converter
 
 
+## 🔗 References
+
+**Pandas**
+* [Pandas - Documentation](https://pandas.pydata.org/docs/)
+
+**cx_Oracle**
+* [cx_Oracle - Documentation](https://cx-oracle.readthedocs.io/en/latest/)
+
+**Path Converter**
+* [Path Converter - Repository](https://github.com/r3card0/WSL-path-converter)
+
+# 👤 Author
+
+* GitHub: [r3card0](https://github.com/r3card0)
+* LinkedIn: [Ricardo](https://www.linkedin.com/in/ricardordzsaldivar/)
+
+Update: Feb 2026
