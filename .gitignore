@@ -2,6 +2,7 @@
 /test
 /utils
 /venv_test
-/notebooks/.ipynb_checkpoints
+/notebooks
 /src/python_oracle_toolkit.egg-info/
 /src/python_oracle_toolkit/__pycache__/
+requirements.txt

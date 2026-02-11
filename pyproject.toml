@@ -8,9 +8,31 @@ version = "0.1.0"
 description = "Toolkit that provides a robust solution for connecting to Oracle databases and managing Pluggable Databases (PDB) through Python"
 readme = "README.md"
 requires-python = ">=3.10"
+
 authors = [
     {name = "r3card0", email = "ricardo.rdz@protonmail.com"}
 ]
 
+dependencies = [
+    "pandas>=2.3.3",
+    "cx_Oracle>=8.3.0",
+    "path-converter @ git+https://github.com/r3card0/WSL-path-converter.git@v0.1.0"
+]
+
+license = {file = "MIT License"}
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/r3card0/Python-Oracle-Toolkit"
+Repository = "https://github.com/r3card0/Python-Oracle-Toolkit"
+
+[tool.setuptools]
+package-dir = { "" = "src"}
+
 [tool.setuptools.packages.find]
+
 where = ["src"]
